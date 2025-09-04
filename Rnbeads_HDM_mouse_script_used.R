@@ -1,10 +1,11 @@
 # Rnbeads Methylation analysis
 BiocManager::install("RnBeads")
-library("RnBeads")
 BiocManager::install("RnBeads.mm10")
-library("RnBeads.mm10")
 BiocManager::install("wateRmelon")
 BiocManager::install("org.Mm.eg.db")
+
+library("RnBeads")
+library("RnBeads.mm10")
 library("wateRmelon")
 library("org.Mm.eg.db")
 library("wordcloud")
@@ -16,8 +17,8 @@ analysis.dir <- "/Users/sharmas30/Documents/WGS3/rna-seq/Methylation/Tumor_Tissu
 report.dir <- file.path(analysis.dir, "reports")
 rnb.options(filtering.sex.chromosomes.removal=TRUE, identifiers.column="Sample_ID",normalization.method = "wm.dasen", normalization.background.method = "methylumi.noob", differential.enrichment.go = FALSE, assembly="mm10", differential.comparison.columns = "Treatment", differential.report.sites = TRUE, export.to.csv = TRUE, export.types=c("tiling", "genes", "promoters", "cpgislands"))
 tumor <- rnb.run.analysis(dir.reports=report.dir, sample.sheet=sample.annotation, data.dir=idat.dir, data.type="infinium.idat.dir")
+save.rnb.set(normal, path= "/Users/sharmas30/Documents/WGS3/rna-seq/Methylation/Tumor_Tissue/rnbeads_normal_object/", archive = TRUE)
 
-save.rnb.set(tumor, , archive = TRUE)
 
 ## normal Tissue
 data.dir <- "/Users/sharmas30/Documents/WGS3/rna-seq/Methylation/Normal_Tissue"
@@ -149,8 +150,6 @@ write.csv(gene_cor, "methylation_expression_correlation_all_stats.csv", row.name
 
 
 
-
-
 #### Normal Tissue ####
 library(dplyr)
 setwd("/Users/sharmas30/Documents/WGS3/rna-seq/Methylation/Intergration/Normal_tissue/Promoter")
@@ -215,7 +214,6 @@ write.csv(gene_cor, "methylation_expression_correlation_all_stats.csv", row.name
 
 
 ### Scatter Plot Normal
-
 setwd("/Users/sharmas30/Documents/WGS3/rna-seq/Methylation/Normal_Tissue/analysis/reports/differential_methylation_data")
 data1<-read.csv("Genes_from_RNA-Seq.csv", header=TRUE, sep=",")
 data2<-read.csv("Ensembl_ID_genes.csv", header=TRUE, sep=",")
