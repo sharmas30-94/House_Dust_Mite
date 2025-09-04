@@ -13,5 +13,8 @@ From each alignment, we retained read alignments that passed stringent mapping a
 Easyblast is an easy interface to Blast on Biowulf. It is a wrapper script that will prompt you for all required parameters, set up your jobs appropriately and submit them to the cluster. You will need to have all your query sequences in multiple files in a single directory (multiple sequences per file is fine). Easyblast will run the latest version of Blast+. The version will be printed at the beginning of the Easyblast run, and will also appear in the summary file in the output directory, and the actual Blast output files.
 
 
-
+## Example Blast run on Biowulf Server
 <img width="858" height="826" alt="blast_biowulf" src="https://github.com/user-attachments/assets/7cd69f71-faac-4285-8b75-a9977c058b41" />
+
+
+## Options used for HDM Study
