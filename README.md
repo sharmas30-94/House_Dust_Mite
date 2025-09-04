@@ -1,5 +1,5 @@
 ## House Dust Mite detection from unmapped Whole Genome Sequencing reads
-This repository documents a pipeline to detect house dust mite (HDM) sequences-specifically Dermatophagoides farinae and Dermatophagoides pteronyssinus—from unmapped human WGS reads.
+This repository documents a pipeline to detect house dust mite (HDM) sequences-specifically Dermatophagoides farinae and Dermatophagoides pteronyssinus from unmapped human WGS reads.
 
 ## Overview
 We aligned 1,217 WGS libraries to the human T2T-CHM13 v2.0 reference and extracted the unmapped reads. These unmapped reads were then aligned against HDM reference assemblies:
