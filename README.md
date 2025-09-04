@@ -18,3 +18,5 @@ Easyblast is an easy interface to Blast on Biowulf. It is a wrapper script that 
 
 
 ## Options used for HDM Study
+- We selected the nt database for the nucleotide sequences.
+- Although the Blast wrapper submits the jobs on partition- norm by default and memory limit is 760 GB. However, these jobs were taking around 840 GB to run the sequences in 10 paritions. Thus, we can these jobs but this helps to create the  
